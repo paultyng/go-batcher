@@ -65,7 +65,7 @@ func TestGet_Basic(t *testing.T) {
 	go func() {
 		defer wg.Done()
 
-		v, err := b.Get(ctx, "notfound")
+		v, err := b.Get(ctx, "notafound")
 		assert.NoError(t, err)
 		assert.Nil(t, v)
 	}()
